@@ -1,26 +1,87 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 
 public class DragonMovement : MonoBehaviour
 {
-    public float boundaryX;
-    // DONT NEGATIVE THIS
-    public float boundaryY;
-    public float boundaryZ;
-    const float entryHeightZ = 10.0f; 
+    // Tuning
+    public float flightHeight = 10.0f;
 
-    Rigidbody dragonRB;
+    public float speed = 5.0f;
 
-    // Start is called before the first frame update
-    void Start()
+    // Boundaries
+    public float XBoundary = 6.0f;
+    public float ZBoundary = 6.0f;
+
+    // Status
+    private Boolean inFlight = false;
+    private Vector3 hover;
+    private Vector3 grounded;
+
+    private Rigidbody dragonRb;
+
+    public void Start()
     {
-        dragonRB = GetComponent<Rigidbody>();
+        // Initialise Components
+        dragonRb = GetComponent<Rigidbody>();
+        hover = new Vector3(5.0f, flightHeight, 0.0f);
+        grounded = new Vector3(5.0f, 0.5f, 0.0f);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        // IF outOfBounds
+        if (outOfBounds())
+        {
+            transform.position = hover;
+        }
+        // IF flightHeight
+        else if (checkFlightHeight())
+        {
+            inFlight = true;
+        }
+        // Rise
+        else if (!inFlight && !checkFlightHeight())
+        {
+            transform.position = Vector3.MoveTowards(transform.position, hover, 1.0f * speed * Time.deltaTime);
+        }
+        // Land
+        else if (!inFlight && checkFlightHeight())
+        {
+            transform.position = Vector3.MoveTowards(transform.position, grounded, 1.0f * speed * Time.deltaTime);
+        }
+        // Across
+        else if (inFlight && checkFlightHeight())
+        {
+            
+        }
     }
+
+    public Boolean outOfBounds()
+    {
+        if (transform.position.x > XBoundary || transform.position.x < -XBoundary)
+        {
+            return true;
+        }
+        if (transform.position.z > ZBoundary || transform.position.z < -ZBoundary)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public Boolean checkFlightHeight()
+    {
+        if (transform.position.y >= flightHeight)
+        {
+            return true;
+        }
+
+        return false;
+    }
+    
+
+    
 }
