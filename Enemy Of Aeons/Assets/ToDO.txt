@@ -1,0 +1,5 @@
+TURTLE
+- Deflect Missile with hit, changing direction to tank
+- on collision with tank (either) apply damage / disable raiseShield
+- Ground Indicators for AOE Bombardment
+- (either) Shield setting invinc-boolean OR shield too much distance to tank.

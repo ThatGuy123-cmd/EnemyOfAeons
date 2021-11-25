@@ -1,0 +1,3 @@
+Isometric Aim
+https://raw.githubusercontent.com/BarthaSzabolcs/Tutorial-IsometricAiming/main/Assets/Scripts/Simple%20-%20CopyThis/IsometricAiming.cs
+
