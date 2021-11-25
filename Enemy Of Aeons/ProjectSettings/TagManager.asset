@@ -8,6 +8,8 @@ TagManager:
   - warlock
   - minion
   - demonlord
+  - Grenade
+  - Rocket
   layers:
   - Default
   - TransparentFX
