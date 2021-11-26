@@ -8,6 +8,15 @@ TagManager:
   - FlameSweep
   - Grenade
   - Cover
+  - demonlord
+  - Missile
+  - Sword
+  - Jaguar
+  - Dragon
+  - Warlock
+  - Turtle
+  - Demon
+  - Menu
   layers:
   - Default
   - TransparentFX
@@ -21,7 +30,7 @@ TagManager:
   - Ground
   - Postprocessing
   - 
-  - 
+  - Enemy
   - 
   - 
   - 

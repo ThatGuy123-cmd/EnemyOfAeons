@@ -11,6 +11,8 @@ public class ColissionHandler : MonoBehaviour
     // Relations
     GameObject player;
     public PlayerHealth playerHealth;
+
+    public MissileControl missleControl;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,13 +36,16 @@ public class ColissionHandler : MonoBehaviour
         {
             Debug.Log("Swept");
         }
+        
+        /*
         else if (other.gameObject.CompareTag("Player"))
         {
             playerHealth.makeInvulnerable();
         }
-
+        */
     }
 
+   /*
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -48,7 +53,7 @@ public class ColissionHandler : MonoBehaviour
             playerHealth.voidInvulnerable();
         }
     }
-
+ */
     private void OnCollisionEnter(Collision other)
     {
         if (CompareTag("Cover"))
