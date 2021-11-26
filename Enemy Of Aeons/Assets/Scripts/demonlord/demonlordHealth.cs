@@ -15,6 +15,7 @@ public class demonlordHealth : MonoBehaviour
     public Slider slider;
 
     public GameObject healthBar;
+    public int counter = 5;
 
 
     // Start is called before the first frame update
@@ -63,12 +64,14 @@ public class demonlordHealth : MonoBehaviour
     // ***  Enemy sword should have isTrigger enabled  ***
     // void OnTriggerEnter(Collider other) {
     //     if(other.gameObject.CompareTag("demonlord")){
+
     //         Rigidbody enemyRigidbody = other.gameObject.GetComponent<Rigidbody>();
     //         Vector3 awayFromPlayer = other.gameObject.transform.position - transform.position; 
 
     //         other.gameObject.GetComponent<HealthScriptName>().damage(damage);
 
     //         enemyRigidbody.AddForce(awayFromPlayer * 10, ForceMode.Impulse);
+    //         counter +=2;
     //     }
     // }
 }
