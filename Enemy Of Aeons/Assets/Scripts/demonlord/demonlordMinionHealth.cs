@@ -53,6 +53,7 @@ public class demonlordMinionHealth : MonoBehaviour
     //         other.gameObject.GetComponent<HealthScriptName>().damage(damage);
 
     //         enemyRigidbody.AddForce(awayFromPlayer * 10, ForceMode.Impulse);
+    //         counter +=1;
     //     }
     // }
 }

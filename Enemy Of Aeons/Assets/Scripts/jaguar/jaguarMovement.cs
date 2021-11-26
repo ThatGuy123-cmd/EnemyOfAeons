@@ -6,9 +6,9 @@ public class jaguarMovement : MonoBehaviour
 {
     private float speed = 5;
     private Rigidbody jaguar;
-    private GameObject playerEx;
+    private GameObject player;
 
- 
+    private Vector3 lookDirection;
 
     private float dist = 6;
  
@@ -17,21 +17,24 @@ public class jaguarMovement : MonoBehaviour
     void Start(){
 
         jaguar = GetComponent<Rigidbody>();
-        playerEx = GameObject.Find("playerEx");
+        player = GameObject.Find("playerEx");
     
     }
 
     // Update is called once per frame
-    void Update(){
-        Vector3 lookDirection = playerEx.transform.position-transform.position;
+    void Update()
+    {
+        lookDirection = player.transform.position-transform.position;
         
         jaguar.AddForce(lookDirection.normalized * speed);
-
-        Vector3 jump2 = new Vector3 (0,1,0);
-
-         if(Vector3.Distance(transform.position,playerEx.transform.position) < dist)
-        {
-                jaguar.AddForce(lookDirection, ForceMode.Impulse);
+        
+        if(Vector3.Distance(transform.position,player.transform.position) == dist){
+            jaguar.AddForce(lookDirection, ForceMode.Impulse);
         }
+
+        //Vector3 jump2 = new Vector3 (0,1,0);
+        //movement(lookDirection);
     }
+    
+   
 }

@@ -13,7 +13,6 @@ public class jaguarHealth : MonoBehaviour
 
     public GameObject healthBar;
 
-    public int rander;
 
 
     // Start is called before the first frame update

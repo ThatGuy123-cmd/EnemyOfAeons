@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 1860960347643805760}
   - component: {fileID: 1168123337381144934}
   - component: {fileID: 8615868223354305486}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Missile
-  m_TagString: Untagged
+  m_TagString: Missile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d7233b0e5d6164599ebf4dd7f5a307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 3
 --- !u!114 &8615868223354305486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,3 +122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d4126189644674e8711a5eb55af25b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aoeRadius: 1.5
+  playerHealth: {fileID: 0}
+  missleControl: {fileID: 0}
