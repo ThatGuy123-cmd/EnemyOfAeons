@@ -27,9 +27,15 @@ MonoBehaviour:
   - m_Name: Link
     m_HashCode: 2687968
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_OpeningDefinition: <u><#40a0ff><link="ID_01">
     m_ClosingDefinition: </u></color></link>
     m_OpeningTagArray: 3c000000750000003e0000003c000000230000003400000030000000610000003000000066000000660000003e0000003c0000006c000000690000006e0000006b0000003d0000002200000049000000440000005f0000003000000031000000220000003e000000
+=======
+    m_OpeningDefinition: <u><#40a0ff><link="ID_01>
+    m_ClosingDefinition: </u></color></link>
+    m_OpeningTagArray: 3c000000750000003e0000003c000000230000003400000030000000610000003000000066000000660000003e0000003c0000006c000000690000006e0000006b0000003d0000002200000049000000440000005f00000030000000310000003e000000
+>>>>>>> Stashed changes
 =======
     m_OpeningDefinition: <u><#40a0ff><link="ID_01>
     m_ClosingDefinition: </u></color></link>

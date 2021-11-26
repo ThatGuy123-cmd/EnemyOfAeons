@@ -5,9 +5,14 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+=======
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+>>>>>>> Stashed changes
 =======
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -38,8 +43,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         m_Texture: {fileID: 28684132378477856, guid: 8f586378b4e144a9851e7b34d9b748ee,
           type: 2}
+=======
+        m_Texture: {fileID: 2846298, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+>>>>>>> Stashed changes
 =======
         m_Texture: {fileID: 2846298, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
 >>>>>>> Stashed changes
@@ -85,7 +94,10 @@ Material:
     - _ScaleY: 1
     - _ShaderFlags: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     - _Sharpness: 0
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     - _SpecularPower: 2

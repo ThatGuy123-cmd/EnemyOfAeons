@@ -26,7 +26,10 @@ Material:
     m_Floats:
     - _ColorMask: 15
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     - _CullMode: 0
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     - _Stencil: 0
@@ -55,6 +58,7 @@ MonoBehaviour:
   materialHashCode: 0
   m_Version: 1.1.0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_FaceInfo:
     m_FamilyName: 
     m_StyleName: 
@@ -77,6 +81,8 @@ MonoBehaviour:
     m_TabWidth: 0
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   spriteSheet: {fileID: 2800000, guid: dffef66376be4fa480fb02b19edbe903, type: 3}
   m_SpriteCharacterTable:
   - m_ElementType: 2
@@ -84,8 +90,13 @@ MonoBehaviour:
     m_GlyphIndex: 0
     m_Scale: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_Name: Smiling face with smiling eyes
     m_HashCode: -1318250903
+=======
+    m_Name: 1f60a
+    m_HashCode: 57188336
+>>>>>>> Stashed changes
 =======
     m_Name: 1f60a
     m_HashCode: 57188336
@@ -113,8 +124,13 @@ MonoBehaviour:
     m_GlyphIndex: 4
     m_Scale: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_Name: Grinning face
     m_HashCode: -95541379
+=======
+    m_Name: 1f600
+    m_HashCode: 57188257
+>>>>>>> Stashed changes
 =======
     m_Name: 1f600
     m_HashCode: 57188257
@@ -130,8 +146,13 @@ MonoBehaviour:
     m_GlyphIndex: 6
     m_Scale: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_Name: Face with tears of joy
     m_HashCode: 239522663
+=======
+    m_Name: 1f602
+    m_HashCode: 57188259
+>>>>>>> Stashed changes
 =======
     m_Name: 1f602
     m_HashCode: 57188259
@@ -168,17 +189,23 @@ MonoBehaviour:
     m_HashCode: 57188264
   - m_ElementType: 2
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_Unicode: 0
     m_GlyphIndex: 12
     m_Scale: 1
     m_Name: .notdef
     m_HashCode: -600915428
 =======
+=======
+>>>>>>> Stashed changes
     m_Unicode: 128536
     m_GlyphIndex: 12
     m_Scale: 1
     m_Name: 1f618
     m_HashCode: 57188168
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   - m_ElementType: 2
     m_Unicode: 129315
@@ -450,8 +477,13 @@ MonoBehaviour:
     xAdvance: 128
     scale: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     name: Smiling face with smiling eyes
     hashCode: -1318250903
+=======
+    name: 1f60a
+    hashCode: 57188336
+>>>>>>> Stashed changes
 =======
     name: 1f60a
     hashCode: 57188336
@@ -511,8 +543,13 @@ MonoBehaviour:
     xAdvance: 128
     scale: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     name: Grinning face
     hashCode: -95541379
+=======
+    name: 1f600
+    hashCode: 57188257
+>>>>>>> Stashed changes
 =======
     name: 1f600
     hashCode: 57188257
@@ -544,8 +581,13 @@ MonoBehaviour:
     xAdvance: 128
     scale: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     name: Face with tears of joy
     hashCode: 239522663
+=======
+    name: 1f602
+    hashCode: 57188259
+>>>>>>> Stashed changes
 =======
     name: 1f602
     hashCode: 57188259
