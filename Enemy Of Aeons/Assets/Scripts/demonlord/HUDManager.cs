@@ -75,6 +75,7 @@ public class HUDManagerJag : MonoBehaviour
 
     public void Quit()
     {
-        Debug.Log("Quit");
+        UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit();
     }
 }
