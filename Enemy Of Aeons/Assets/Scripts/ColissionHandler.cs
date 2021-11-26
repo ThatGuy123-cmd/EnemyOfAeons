@@ -8,10 +8,13 @@ public class ColissionHandler : MonoBehaviour
     
     // Tuning
     public float aoeRadius = 1.5f;
+    // Relations
+    GameObject player;
+    public PlayerHealth playerHealth;
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -27,10 +30,32 @@ public class ColissionHandler : MonoBehaviour
             grenadeExplosion();
             Destroy(gameObject);
         }
-        else
+        else if (CompareTag("Cover"))
         {
-            Destroy(gameObject);    
+            Debug.Log("Swept");
         }
+        else if (other.gameObject.CompareTag("Player"))
+        {
+            playerHealth.makeInvulnerable();
+        }
+
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            playerHealth.voidInvulnerable();
+        }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (CompareTag("Cover"))
+        {
+            Debug.Log("HitCover");    
+        }
+        
     }
 
     void grenadeExplosion()

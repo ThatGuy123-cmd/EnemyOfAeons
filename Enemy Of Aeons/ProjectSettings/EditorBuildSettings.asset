@@ -4,6 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
+<<<<<<< Updated upstream
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Jaguar.unity
@@ -21,3 +22,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Demon.unity
     guid: 68ed2b8ac027dc547ba438aed19d5700
   m_configObjects: {}
+=======
+  m_Scenes: []
+>>>>>>> Stashed changes
