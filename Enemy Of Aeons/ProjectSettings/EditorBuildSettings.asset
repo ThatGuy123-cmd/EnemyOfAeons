@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/AlphaMenu.unity
+    guid: 5fa97f1788d91f542b317a8cc6379c16
+  - enabled: 1
     path: Assets/Scenes/Jaguar.unity
     guid: d1aad379e513baa47bfe6bfd877ce5f6
   - enabled: 1
