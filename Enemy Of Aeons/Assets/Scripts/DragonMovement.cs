@@ -46,7 +46,7 @@ public class DragonMovement : MonoBehaviour
         if (routine)
         {
             StartCoroutine("routineHandler");
-            Debug.Log("Reached Routine IF Statement...");
+            //Debug.Log("Reached Routine IF Statement...");
         }
         //Debug.Log("Checking OOB...");
 
@@ -57,7 +57,7 @@ public class DragonMovement : MonoBehaviour
 
     IEnumerator routineHandler()
     {
-        Debug.Log("RoutineHandler: CALLED...");
+        //Debug.Log("RoutineHandler: CALLED...");
         Vector3 curPos = transform.position;
         // IF OUT OF BOUNDS
         if (outOfBounds)
@@ -71,7 +71,7 @@ public class DragonMovement : MonoBehaviour
             }
             if (positioned)
             {
-                Debug.Log(hoverPosition);
+                //Debug.Log(hoverPosition);
                 transform.position = hoverPosition;
                 positioned = false;
             }
@@ -88,7 +88,7 @@ public class DragonMovement : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("LANDING STOPPED!");
+                //Debug.LogWarning("LANDING STOPPED!");
                 StopCoroutine("landing");
                 positioned = false;
                 yield return null;
@@ -96,7 +96,7 @@ public class DragonMovement : MonoBehaviour
         }
         else if (routine)
         {
-            Debug.Log("RoutineHandler: FLYING");
+            //Debug.Log("RoutineHandler: FLYING");
             yield return StartCoroutine("flightLogic");
         }
         yield return new WaitForSeconds(1);
@@ -109,17 +109,17 @@ public class DragonMovement : MonoBehaviour
         // Rise if below flightheight
         if (curPos.y < flightHeight)
         {
-            Debug.Log("FlightLogic: RISING");
+            //Debug.Log("FlightLogic: RISING");
             transform.Translate(Vector3.up * speed * Time.deltaTime);
             yield return null;
         }
         // Reached Altitude and Route set check
         else
         {
-            Debug.Log("FlightLogic: REACHED ALTITUDE");
+            //Debug.Log("FlightLogic: REACHED ALTITUDE");
             if (!vectorSet)
             {  
-                Debug.Log("FlightLogic: RouteVector NOT set; SETTING...");
+                //Debug.Log("FlightLogic: RouteVector NOT set; SETTING...");
                 flightVectors = chooseRoute();
                 vectorSet = true;
             }
@@ -128,15 +128,16 @@ public class DragonMovement : MonoBehaviour
             {
                 if (!positioned)
                 {
-                    Debug.Log("FlightLogic: NOT positioned; POSITIONING...");
+                    //Debug.Log("FlightLogic: NOT positioned; POSITIONING...");
                     transform.position = flightVectors[0];
                     transform.LookAt(flightVectors[1]);
+                    Debug.Log(flightVectors[0]);
                     spawnFlame(flightVectors[0]);
                     positioned = true;
                 }
                 else
                 {
-                    Debug.Log("FlightLogic: TRAVELLING...,SPAWN FLAME...");
+                    //Debug.Log("FlightLogic: TRAVELLING...,SPAWN FLAME...");
                     transform.position = Vector3.MoveTowards(curPos, flightVectors[1], 1.0f * speed * Time.deltaTime);
                     yield return null;
                 }
@@ -147,11 +148,11 @@ public class DragonMovement : MonoBehaviour
 
     IEnumerator landing()
     {
-        Debug.Log("LANDING FUNCTION: ");
+        //Debug.Log("LANDING FUNCTION: ");
         Vector3 curPos = transform.position;
         if (!routine && curPos.y > 1.0f)
         {  
-            Debug.Log("LANDING FUNCTION: IS AERIAL");
+            //Debug.Log("LANDING FUNCTION: IS AERIAL");
             transform.Translate(Vector3.down * speed * Time.deltaTime);
             yield return null;
         }
@@ -197,8 +198,7 @@ public class DragonMovement : MonoBehaviour
 
     Boolean isOutOfBounds(Vector3 curPos)
     {
-        Debug.Log("isOOB: " + curPos.x + "   " + curPos.z
-        + "\n " + XBoundary + "   " + (-XBoundary));
+        //Debug.Log("isOOB: " + curPos.x + "   " + curPos.z+ "\n " + XBoundary + "   " + (-XBoundary));
         if (curPos.x <= -XBoundary || curPos.x >= XBoundary)
         {
             return true;
@@ -215,26 +215,26 @@ public class DragonMovement : MonoBehaviour
         Vector3 origin;
         float x = position.x;
         float z = position.z;
-        if (z == 0)
+        if (z == 0.0f)
         {
             if (x > 0)
             {
-                origin = new Vector3(0 - 1.5f, 0, 0);
+                origin = new Vector3(0 - 1.0f, 0, 0);
             }
             else
             {
-                origin = new Vector3(0 + 1.5f, 0, 0);
+                origin = new Vector3(0 + 1.0f, 0, 0);
             }
         }
         else
         {
             if (z > 0)
             {
-                origin = new Vector3(0, 0, z - 1.5f);
+                origin = new Vector3(0, 0, z - 1.0f);
             }
             else
             {
-                origin = new Vector3(0, 0, z + 1.5f);
+                origin = new Vector3(0, 0, z + 1.0f);
             }
             
         }
