@@ -362,6 +362,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ebc5258bcca3924584f78a4f512f4b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
+  dist: 2
+  demonlordBody: {fileID: 0}
+  player: {fileID: 0}
+  lookDirection: {x: 0, y: 0, z: 0}
+  movement: {fileID: 0}
 --- !u!114 &8822832041413854110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,6 +412,7 @@ MonoBehaviour:
   Maxhealth: 10
   slider: {fileID: 2541159334780756194}
   healthBar: {fileID: 4944720689182930377}
+  counter: 5
 --- !u!1 &8456532964956141392
 GameObject:
   m_ObjectHideFlags: 0

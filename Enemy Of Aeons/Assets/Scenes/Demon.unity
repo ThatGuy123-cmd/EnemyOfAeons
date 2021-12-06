@@ -2909,6 +2909,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 62c01cd363116e4418505d6d72764b0d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 492031f9cbc117d419c5271ccc50b76a, type: 3}
+--- !u!54 &540077771 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 1954202502664941684, guid: 7f123e1d19c39e040863eee90f3b62fb, type: 3}
+  m_PrefabInstance: {fileID: 5546349213279155686}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &550772442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12547,6 +12552,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 562029043}
     m_Modifications:
+    - target: {fileID: 1954202502664941684, guid: 7f123e1d19c39e040863eee90f3b62fb, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1954202502664941684, guid: 7f123e1d19c39e040863eee90f3b62fb, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2541159334780756194, guid: 7f123e1d19c39e040863eee90f3b62fb, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -12595,6 +12608,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4034565114036760753, guid: 7f123e1d19c39e040863eee90f3b62fb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1345314880}
+    - target: {fileID: 4034565114036760753, guid: 7f123e1d19c39e040863eee90f3b62fb, type: 3}
+      propertyPath: movement
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4034565114036760753, guid: 7f123e1d19c39e040863eee90f3b62fb, type: 3}
+      propertyPath: demonlordBody
+      value: 
+      objectReference: {fileID: 540077771}
     - target: {fileID: 5546349213958895348, guid: 7f123e1d19c39e040863eee90f3b62fb, type: 3}
       propertyPath: m_Name
       value: demonlord

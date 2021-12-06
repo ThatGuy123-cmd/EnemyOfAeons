@@ -7,9 +7,7 @@ public class jaguarMovement : MonoBehaviour
     private float speed = 5;
     private Rigidbody jaguar;
     private GameObject player;
-
     private Vector3 lookDirection;
-
     private float dist = 6;
  
      
