@@ -4,28 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-<<<<<<< HEAD
-    path: Assets/Scenes/MainMenu.unity
-    guid: 6ace0d587d5dbf14db52bab9157a20cc
-=======
-    path: Assets/Scenes/AlphaMenu.unity
-    guid: 5fa97f1788d91f542b317a8cc6379c16
->>>>>>> 634c36b947a69c2fc70d1f8f565daf6e939405d1
-  - enabled: 1
-    path: Assets/Scenes/Jaguar.unity
-    guid: d1aad379e513baa47bfe6bfd877ce5f6
-  - enabled: 1
-    path: Assets/Scenes/DragonMovement.unity
-    guid: c282dacad2cfc6244ad03864b548cef2
-  - enabled: 1
-    path: Assets/Scenes/Warlock.unity
-    guid: 8163f669090f4e34a821ff3eed9dbb67
-  - enabled: 1
-    path: Assets/Scenes/TurtletankMovement.unity
-    guid: 3c68c2fd8b73bfa419f1baa99c1f0340
-  - enabled: 1
-    path: Assets/Scenes/Demon.unity
-    guid: 68ed2b8ac027dc547ba438aed19d5700
+  m_Scenes: []
   m_configObjects: {}

@@ -27,7 +27,7 @@ public class ColissionHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (CompareTag("Grenade"))
+        if (other.CompareTag("Grenade"))
         {
             grenadeExplosion();
             Destroy(gameObject);
