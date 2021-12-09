@@ -42,11 +42,11 @@ public class PlayerHealth : MonoBehaviour
 
     public void damage(float damage)
     {
-        Maxhealth -= damage;
+        health -= damage;
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Debug.LogWarning("THE PLAYER IS DEAD!");
         }
     }
 

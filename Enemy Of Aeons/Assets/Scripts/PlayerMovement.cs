@@ -20,18 +20,13 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        // Swing
-        if (Input.GetMouseButtonDown(0))
-        {
-            swingSword();
-        }
-
+        float horizontalInput = Input.GetAxis("Horizontal");
         // Dash
         if (Input.GetMouseButtonDown(1))
         {
             dash();
         }
+        transform.Translate(transform.right * horizontalInput * speed * Time.deltaTime);
     }
 
     private void FixedUpdate()
@@ -42,16 +37,25 @@ public class PlayerMovement : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         
         
-        playerRb.MovePosition(playerPos + transform.right * horizontalInput * speed * Time.deltaTime);
+        transform.Translate(transform.right * horizontalInput * speed * Time.deltaTime);
+        movePlayer(verticalInput, horizontalInput);
         playerRb.MovePosition(playerPos + transform.forward * verticalInput * speed * Time.deltaTime);
     }
 
-    public void swingSword()
+    public void movePlayer(float movingV, float movingH)
     {
-        
+        if (movingV != 0 || movingH != 0)
+        {
+            animator.SetBool("Move", true);
+        }
+        else
+        {
+            animator.SetBool("Move",false);
+        }
     }
 
     public void dash()
     {
+        
     }
 }

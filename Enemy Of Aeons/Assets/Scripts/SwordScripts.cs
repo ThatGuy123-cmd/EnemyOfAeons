@@ -9,6 +9,7 @@ public class SwordScripts : MonoBehaviour
 
     public Transform attackPoint;
     public float reach = 1.0f;
+    public int dmg;
 
     public LayerMask enemyLayer;
     // Start is called before the first frame update
@@ -40,7 +41,7 @@ public class SwordScripts : MonoBehaviour
             }
             else
             {
-                enemy.GetComponent<EnemyHealth>().damage(5);
+                enemy.GetComponent<EnemyHealth>().damage(dmg);
             }
         }
 

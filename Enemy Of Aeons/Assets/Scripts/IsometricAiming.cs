@@ -60,6 +60,7 @@ using UnityEngine;
             {
                 // The Raycast hit something, return with the position.
                 return (success: true, position: hitInfo.point);
+                
             }
             else
             {

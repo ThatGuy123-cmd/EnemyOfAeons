@@ -44,7 +44,7 @@ public class EnemyHealth : MonoBehaviour
     }
 
     public void damage(float damage){
-        Maxhealth -= damage;
+        health -= damage;
 
         if(health <=0){
             Destroy(gameObject);
