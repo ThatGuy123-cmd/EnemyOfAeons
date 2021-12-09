@@ -344,6 +344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grenadePrefab: {fileID: 8258387772267840383, guid: 6c14287a9449139488582f72cf32a72f,
     type: 3}
+  gIndicatorPrefab: {fileID: 0}
   missilePrefab: {fileID: 1860960347643805761, guid: 9b7becf27376a52438161bb24ed2682b,
     type: 3}
   player: {fileID: 1887236772}

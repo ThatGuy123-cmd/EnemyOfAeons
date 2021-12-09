@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,14 +30,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Basic Movement
-        float verticalInput = Input.GetAxis("Vertical");
-        float horizontalInput = Input.GetAxis("Horizontal");
-        
-        
-        transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime);
-        transform.Translate(Vector3.forward * verticalInput * speed * Time.deltaTime);
-        
+       
         // Swing
         if (Input.GetMouseButtonDown(0))
         {
@@ -63,6 +57,18 @@ public class PlayerMovement : MonoBehaviour
         IsGrounded();
         
         zoned();
+    }
+
+    private void FixedUpdate()
+    {
+        Vector3 playerPos = transform.position; 
+        // Basic Movement
+        float verticalInput = Input.GetAxis("Vertical");
+        float horizontalInput = Input.GetAxis("Horizontal");
+        
+        
+        playerRb.MovePosition(playerPos + transform.right * horizontalInput * speed * Time.deltaTime);
+        playerRb.MovePosition(playerPos + transform.forward * verticalInput * speed * Time.deltaTime);
     }
 
     public void swingSword()
