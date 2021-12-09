@@ -17,6 +17,11 @@ TagManager:
   - Turtle
   - Demon
   - Menu
+  - pillar
+  - warlock
+  - minion
+  - floor
+  - powerup
   layers:
   - Default
   - TransparentFX

@@ -8,12 +8,22 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody playerRb;
     private GameObject sword;
     public float speed;
+    public Collider collider;
+    
+    public float distToGround;
+
+    public SwordHit swordCall;
 
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();        
         sword = GameObject.Find("Sword");
+
+        //collider = gameObject.CompareTag("floor");
+        //GetComponent<Collider>();
+
+        distToGround = collider.bounds.extents.y;
     }
 
     // Update is called once per frame
@@ -31,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             swingSword();
+            //swordCall();
         }
 
         // Dash
@@ -38,6 +49,20 @@ public class PlayerMovement : MonoBehaviour
         {
             dash();
         }
+
+        // if (IsGrounded())
+        // {
+        //     playerRb.transform.position.y =
+        // }
+        // else
+        //
+        // {
+        //     playerRb.transform.position.y = 
+        // }
+
+        IsGrounded();
+        
+        zoned();
     }
 
     public void swingSword()
@@ -48,4 +73,21 @@ public class PlayerMovement : MonoBehaviour
     public void dash()
     {
     }
+
+   
+    
+    public bool IsGrounded(){
+        return Physics.Raycast(transform.position, -Vector3.down, distToGround + 0.1f);
+    }
+
+    public void zoned()
+    {
+        if (transform.position.z >= 47|| transform.position.z <= 17 || transform.position.x <= -35 || transform.position.x >= 19)
+        {
+            playerRb.transform.position = new Vector3(-11.89f, 1.8f, 34.32f);
+
+        }
+    } 
+    
+    
 }

@@ -8,9 +8,12 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float health;
-    public float Maxhealth;
+    public float currentHealth = 10;
+    //public float Maxhealth;
     public Boolean invulnerable;
+
+    public GameObject deathmenu;
+    public GameObject HUD;
 
     //public Slider slider;
 
@@ -20,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health = Maxhealth;
+        //health = Maxhealth;
         //slider.value = CalculateHealth();
     }
 
@@ -35,19 +38,28 @@ public class PlayerHealth : MonoBehaviour
         // }
     }
 
-    float CalculateHealth()
-    {
-        return health / Maxhealth;
-    }
+    // float CalculateHealth()
+    // {
+    //     return health / Maxhealth;
+    // }
 
     public void damage(float damage)
     {
-        Maxhealth -= damage;
+        currentHealth -= damage;
 
-        if (health <= 0)
+        if (currentHealth <= 0)
         {
             Destroy(gameObject);
+            deathmenu.SetActive(true);
+            HUD.SetActive(false);
+            
+            
         }
+    }
+    
+    public void setHealth(float health)
+    {
+        currentHealth += health;
     }
 
     public void makeInvulnerable()
@@ -73,9 +85,9 @@ public class PlayerHealth : MonoBehaviour
     //     if(other.gameObject.CompareTag("demonlord")){
     //         Rigidbody enemyRigidbody = other.gameObject.GetComponent<Rigidbody>();
     //         Vector3 awayFromPlayer = other.gameObject.transform.position - transform.position; 
-
-    //         other.gameObject.GetComponent<HealthScriptName>().damage(damage);
-
+    //
+    //         other.gameObject.GetComponent<demonlordHealth>().damage(1);
+    //
     //         enemyRigidbody.AddForce(awayFromPlayer * 10, ForceMode.Impulse);
     //     }
     // }
