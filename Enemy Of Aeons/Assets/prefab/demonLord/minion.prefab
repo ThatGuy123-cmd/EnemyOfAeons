@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 8377384340043170103}
   - component: {fileID: 7513332165754586986}
   - component: {fileID: 4963326049675005740}
-  - component: {fileID: 3678481607146714723}
   - component: {fileID: 7361509048117601305}
   - component: {fileID: 7919104444670782290}
-  - component: {fileID: 3549939953165011369}
+  - component: {fileID: 4047350687863565676}
   m_Layer: 0
   m_Name: minion
   m_TagString: minion
@@ -97,22 +96,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.9100282
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3678481607146714723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2139294743353331182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e576375e2600244bcbdb84339b1acc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minionPrefab: {fileID: 2139294743353331182}
-  player: {fileID: 735200459439270578, guid: 67ba76235e38a924eb01c3a9d40566fd, type: 3}
 --- !u!114 &7361509048117601305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,8 +111,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minionCount: 0
-  demonlord: {fileID: 5546349213958895348, guid: 7f123e1d19c39e040863eee90f3b62fb, type: 3}
+  demonlord: {fileID: 5546349213958895348, guid: 7f123e1d19c39e040863eee90f3b62fb,
+    type: 3}
   minionPrefab: {fileID: 2139294743353331182}
+  player: {fileID: 0}
 --- !u!54 &7919104444670782290
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -144,7 +131,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3549939953165011369
+--- !u!114 &4047350687863565676
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,8 +140,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2139294743353331182}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855a7016b4473e04a9787737e14339e9, type: 3}
+  m_Script: {fileID: 11500000, guid: c3c5c4d88bffd204ea6eb62d6a63e873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
-  Maxhealth: 0
+  Currenthealth: 5
+  healthBar: {fileID: 0}
+  counter: 5
