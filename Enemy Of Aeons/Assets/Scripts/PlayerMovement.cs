@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Vector3 playerPos = transform.position; 
         move();
 
         if (Input.GetMouseButtonDown(0))
