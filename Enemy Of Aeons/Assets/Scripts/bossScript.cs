@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class bossScript : MonoBehaviour
 {
-    public float speed = 2.0f;
+    //public float speed = 2.0f;
     public Rigidbody bossBody;
     public GameObject player;
     public float Currenthealth = 10;
@@ -20,7 +20,6 @@ public class bossScript : MonoBehaviour
     public float jumpSpeed = 8f;
     private float vSpeed = 0f;
     private bool jump = false;
-    public Vector3 lookDirection;
 
 
     void Start()
@@ -46,7 +45,7 @@ public class bossScript : MonoBehaviour
         {
             anim.SetTrigger("Death");
         }
-        Move(); 
+       // Move(); 
         fallDeath();
     }
     float CalculateHealth(){
@@ -62,16 +61,13 @@ public class bossScript : MonoBehaviour
             Currenthealth = 0;
         }
     }
-    
-    public void Move(){
-        
-        anim.SetTrigger("still");
-        anim.SetBool("rep", false);
-        lookDirection = player.transform.position-transform.position;
-        //transform.Rotate(0,0,0);
-        
-        bossBody.AddForce(lookDirection.normalized * speed);
-    }
+
+    // public void Move()
+    // {
+    //     anim.SetTrigger("still");
+    //     anim.SetBool("rep", false);
+    //     transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+    // }
 
     public void OnCollisionEnter(Collision other) {
         if(other.gameObject.CompareTag("Player")){

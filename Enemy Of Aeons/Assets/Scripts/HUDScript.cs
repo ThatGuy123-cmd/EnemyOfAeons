@@ -9,18 +9,18 @@ public class HUDScript : MonoBehaviour
 {
     public Text scoreText;
     public Text healthText;
-    public Text ScoreCounterText;
+    //public Text ScoreCounterText;
     
     public int scoreCount = 0;
     
     public PlayerHealth health1;
-    public PlayerScore Counter;
+    //public PlayerScore Counter;
 
     void Update()
     {
         score();
         health();
-        scoreCounter();
+        //scoreCounter();
     }
 
     public void score()
@@ -34,10 +34,10 @@ public class HUDScript : MonoBehaviour
         healthText.text = "Health = " + health1.currentHealth;
     }
     
-    public void scoreCounter()
-    {
-        ScoreCounterText.text = "Bonus Score = " + Counter.timeSpentOnLevel;
-    }
+    // public void scoreCounter()
+    // {
+    //     ScoreCounterText.text = "Bonus Score = " + Counter.timeSpentOnLevel;
+    // }
     
     
 }
