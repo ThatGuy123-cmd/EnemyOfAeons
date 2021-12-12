@@ -447,10 +447,15 @@ GameObject:
   - component: {fileID: 7035435717763583056}
   - component: {fileID: 7035435717763583021}
   - component: {fileID: 7035435717763583057}
+  - component: {fileID: 3352979798366482221}
   - component: {fileID: 7035435717763583022}
+<<<<<<< HEAD
   - component: {fileID: 7528554522970365153}
   - component: {fileID: 2784547477479419182}
   - component: {fileID: 5330483923630983976}
+=======
+  - component: {fileID: -3391978052969681243}
+>>>>>>> cf01b76cde84b8884d16e389affbe57261033221
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -524,9 +529,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec182356cfb899a45b2d8e0bcfd2c62d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   speed: 5
   scripted: {fileID: 7035435717763583022}
   jumped: 5
+=======
+  animator: {fileID: 9500000, guid: da217624aef4f8d40a2f54469ae868e2, type: 3}
+  speed: 5
+--- !u!114 &3352979798366482221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7035435717763583058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6963811fcb957f4a97a0b3e99828956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  Maxhealth: 10
+  invulnerable: 0
+>>>>>>> cf01b76cde84b8884d16e389affbe57261033221
 --- !u!114 &7035435717763583022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,6 +566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 7035435717763583056}
   attackPoint: {fileID: 7035435718351216241}
+<<<<<<< HEAD
   reach: 3
   damage: 1
   enemyLayer:
@@ -548,6 +574,15 @@ MonoBehaviour:
     m_Bits: 4096
 --- !u!65 &7528554522970365153
 BoxCollider:
+=======
+  reach: 1
+  dmg: 0
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 4096
+--- !u!136 &-3391978052969681243
+CapsuleCollider:
+>>>>>>> cf01b76cde84b8884d16e389affbe57261033221
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -556,6 +591,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
+<<<<<<< HEAD
   serializedVersion: 2
   m_Size: {x: 1, y: 2.9127822, z: 1.7421771}
   m_Center: {x: 1.8594893e-16, y: 1.454756, z: -0.049414992}
@@ -602,6 +638,12 @@ MonoBehaviour:
   enemyhealth: {fileID: 0}
   winMenu: {fileID: 0}
   enem: []
+=======
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+>>>>>>> cf01b76cde84b8884d16e389affbe57261033221
 --- !u!1 &7035435717768849296
 GameObject:
   m_ObjectHideFlags: 0

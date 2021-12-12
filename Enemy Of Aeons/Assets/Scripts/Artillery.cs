@@ -62,12 +62,12 @@ public class Artillery : MonoBehaviour
         }
  
     }
-
+    
     IEnumerator launchMissle()
     {
         while (!_stopSpawn)
         {
-            Vector3 launchPos = new Vector3(randVector(XBoundary), 0.5f, ZBoundary);
+            Vector3 launchPos = new Vector3(randVector(XBoundary), 0.5f, ZBoundary - 1.2f);
             Instantiate(missilePrefab, launchPos, rotation: missilePrefab.transform.rotation);
             yield return new WaitForSeconds(Random.Range(2.0f, 5.0f));
         }

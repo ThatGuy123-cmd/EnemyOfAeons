@@ -9,7 +9,12 @@ public class SwordScripts : MonoBehaviour
 
     public Transform attackPoint;
     public float reach = 1.0f;
+<<<<<<< HEAD
     public float damage = 1.0f;
+=======
+    public int dmg;
+
+>>>>>>> cf01b76cde84b8884d16e389affbe57261033221
     public LayerMask enemyLayer;
 
     public AudioSource source;
@@ -45,7 +50,11 @@ public class SwordScripts : MonoBehaviour
             }
             else
             {
+<<<<<<< HEAD
                 enemy.gameObject.GetComponent<mainHealth>().damage(5);
+=======
+                enemy.GetComponent<EnemyHealth>().damage(dmg);
+>>>>>>> cf01b76cde84b8884d16e389affbe57261033221
             }
         }
 
