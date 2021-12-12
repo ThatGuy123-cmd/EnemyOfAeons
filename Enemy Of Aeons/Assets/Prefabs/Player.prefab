@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< Updated upstream
 --- !u!1 &20154426
 GameObject:
   m_ObjectHideFlags: 0
@@ -83,6 +84,8 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20154426}
   m_Enabled: 1
+=======
+>>>>>>> Stashed changes
 --- !u!1 &7035435717558641213
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,9 +490,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec182356cfb899a45b2d8e0bcfd2c62d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   speed: 5
   scripted: {fileID: 7035435717763583022}
   jumped: 5
+=======
+>>>>>>> Stashed changes
   animator: {fileID: 9500000, guid: da217624aef4f8d40a2f54469ae868e2, type: 3}
 --- !u!114 &3352979798366482221
 MonoBehaviour:
@@ -505,12 +511,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 10
   invulnerable: 0
+<<<<<<< Updated upstream
   deathmenu: {fileID: 0}
   HUD: {fileID: 0}
   animator: {fileID: 7035435717763583056}
   enemyhealth: {fileID: 0}
   winMenu: {fileID: 0}
   enem: []
+=======
+>>>>>>> Stashed changes
 --- !u!114 &7035435717763583022
 MonoBehaviour:
   m_ObjectHideFlags: 0

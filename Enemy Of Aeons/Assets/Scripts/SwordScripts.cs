@@ -9,11 +9,16 @@ public class SwordScripts : MonoBehaviour
 
     public Transform attackPoint;
     public float reach = 1.0f;
+<<<<<<< Updated upstream
 
     public float damage = 1.0f;
 
     public int dmg;
 
+=======
+    public float damage = 1.0f;
+    public int dmg;
+>>>>>>> Stashed changes
     public LayerMask enemyLayer;
 
     public AudioSource source;
@@ -49,7 +54,12 @@ public class SwordScripts : MonoBehaviour
             }
             else
             {
+<<<<<<< Updated upstream
                 enemy.GetComponent<EnemyHealth>().damage(dmg);
+=======
+                enemy.gameObject.GetComponent<mainHealth>().damage(5);
+
+>>>>>>> Stashed changes
             }
         }
 

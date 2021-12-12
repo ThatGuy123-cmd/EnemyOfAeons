@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody playerRb;
+    public Animator animator;
     private GameObject sword;
     public float speed;
     public SwordScripts scripted;
@@ -26,17 +27,47 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
         move();
 
         if (Input.GetMouseButtonDown(0))
         {
+<<<<<<< Updated upstream
             
         }
+=======
+            scripted.swingSword();
+        }
+
+        float horizontalInput = Input.GetAxis("Horizontal");
+
+        // Dash
+>>>>>>> Stashed changes
         if (Input.GetMouseButtonDown(1))
         {
             jump();
         }
+<<<<<<< Updated upstream
+=======
+
+
+        // if (IsGrounded())
+        // {
+        //     playerRb.transform.position.y =
+        // }
+        // else
+        //
+        // {
+        //     playerRb.transform.position.y = 
+        // }
+
+        //IsGrounded();
+        
+        //zoned();
+>>>>>>> Stashed changes
     }
 
     private void FixedUpdate()
@@ -50,11 +81,21 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(transform.right * horizontalInput * speed * Time.deltaTime);
         movePlayer(verticalInput, horizontalInput);
         playerRb.MovePosition(playerPos + transform.forward * verticalInput * speed * Time.deltaTime);
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     }
 
     public void movePlayer(float movingV, float movingH)
     {
+<<<<<<< Updated upstream
         scripted.swingSword();
+=======
+
+        scripted.swingSword();
+
+>>>>>>> Stashed changes
         if (movingV != 0 || movingH != 0)
         {
             animator.SetBool("Move", true);
@@ -63,6 +104,10 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("Move",false);
         }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     }
 
     public void jump()
