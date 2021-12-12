@@ -9,44 +9,15 @@ using UnityEngine.UI;
 public class mainHealth : MonoBehaviour
 {
     public float Currenthealth = 5;
-    //public float Maxhealth = 1;
-
-    //public Slider slider;
-
-    public GameObject healthBar;
+    public Animator animator;
     public int counter = 5;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        //Currenthealth = Maxhealth;
-        //slider.value = CalculateHealth();
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-        //slider.value = CalculateHealth();
-
-        // ***  Insert to call next scene when main enemy is dead  ***
-        // if (active = false){
-        //     SceneManager.LoadScene("");
-        // }
-        
+    void Update(){
         if(Currenthealth <= 0f){
+            animator.SetTrigger("Die");
             Destroy(gameObject);
         }
-        
-        
-        
     }
-
-    // float CalculateHealth(){
-    //     //return Currenthealth/Maxhealth;
-    // }
 
     public void damage(float damage){
         Currenthealth -= damage;
@@ -54,7 +25,6 @@ public class mainHealth : MonoBehaviour
         if(Currenthealth <=0){
             Destroy(gameObject);
         }
-            
     }
 
     
@@ -71,10 +41,11 @@ public class mainHealth : MonoBehaviour
     // ***  Enemy sword should have isTrigger enabled  ***
     public void OnCollisionEnter(Collision other) {
         if(other.gameObject.CompareTag("Player")){
-
+            animator.SetTrigger("Attack 01");
             Rigidbody enemyRigidbody = other.gameObject.GetComponent<Rigidbody>();
             Vector3 awayFromPlayer = other.gameObject.transform.position - transform.position; 
-
+            
+            
             other.gameObject.GetComponent<PlayerHealth>().damage(1);
 
             enemyRigidbody.AddForce(awayFromPlayer * 10, ForceMode.Impulse);

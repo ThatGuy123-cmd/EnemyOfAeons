@@ -25,7 +25,7 @@ public class warlockPillarMovement : MonoBehaviour {
 
         objs = GameObject.FindGameObjectsWithTag("pillar").Length;
 
-        if(objs == 1){
+        if(objs <=1){
             SpawnPillars(9);
         }
     }

@@ -31,7 +31,7 @@ public class chest : MonoBehaviour
             //powerupIndicator.SetActive(true);
             hit.damage = 2.0f;
             powerup.gameObject.SetActive(true);
-            StartCoroutine(PowerupCooldown(5));
+            StartCoroutine(PowerupCooldown(10));
             
         }
     }

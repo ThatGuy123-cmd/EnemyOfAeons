@@ -22,6 +22,7 @@ TagManager:
   - minion
   - floor
   - powerup
+  - edge
   layers:
   - Default
   - TransparentFX
