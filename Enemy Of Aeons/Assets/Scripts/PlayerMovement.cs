@@ -12,9 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public SwordScripts scripted;
     public float jumped = 5.0f;
-    public Animator animator;
 
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,31 +26,24 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
         move();
 
         if (Input.GetMouseButtonDown(0))
         {
-<<<<<<< Updated upstream
+
             
         }
-=======
-            scripted.swingSword();
-        }
+
 
         float horizontalInput = Input.GetAxis("Horizontal");
 
         // Dash
->>>>>>> Stashed changes
+
         if (Input.GetMouseButtonDown(1))
         {
             jump();
         }
-<<<<<<< Updated upstream
-=======
 
 
         // if (IsGrounded())
@@ -67,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         //IsGrounded();
         
         //zoned();
->>>>>>> Stashed changes
+
     }
 
     private void FixedUpdate()
@@ -81,21 +73,11 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(transform.right * horizontalInput * speed * Time.deltaTime);
         movePlayer(verticalInput, horizontalInput);
         playerRb.MovePosition(playerPos + transform.forward * verticalInput * speed * Time.deltaTime);
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
     }
 
     public void movePlayer(float movingV, float movingH)
     {
-<<<<<<< Updated upstream
-        scripted.swingSword();
-=======
-
-        scripted.swingSword();
-
->>>>>>> Stashed changes
         if (movingV != 0 || movingH != 0)
         {
             animator.SetBool("Move", true);
@@ -104,10 +86,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("Move",false);
         }
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
     }
 
     public void jump()
