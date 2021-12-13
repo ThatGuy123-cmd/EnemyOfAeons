@@ -33,10 +33,10 @@ public class MinionSpawn : MonoBehaviour
         Move();
         fallDeath();
 
-        if (speed >= 1)
-        {
-            animator.SetTrigger("Walk Forward");
-        }
+        // while(speed >= 1)
+        // {
+        //     animator.SetTrigger("Walk Forward");
+        // }
     }
 
 
@@ -61,10 +61,8 @@ public class MinionSpawn : MonoBehaviour
     
     public void Move()
     {
-        
-        Vector3 lookDirection = player.transform.position-transform.position;
-        
-        minionBody.AddForce(lookDirection.normalized * speed);
+        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+
 
        
     }

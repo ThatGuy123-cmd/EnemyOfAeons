@@ -6,19 +6,13 @@ using UnityEngine;
 public class SwordScripts : MonoBehaviour
 {
     public Animator animator;
-
+    public Rigidbody playerRb;
     public Transform attackPoint;
     public float reach = 1.0f;
-<<<<<<< Updated upstream
-
-    public float damage = 1.0f;
-
-    public int dmg;
-
-=======
+    
     public float damage = 1.0f;
     public int dmg;
->>>>>>> Stashed changes
+
     public LayerMask enemyLayer;
 
     public AudioSource source;
@@ -33,6 +27,11 @@ public class SwordScripts : MonoBehaviour
     void Update(){
         if (Input.GetMouseButtonDown(0)){
             swingSword();
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            playerRb.AddForce(transform.position * 2, ForceMode.Impulse);
+            //jump();
         }
     }
 
@@ -54,12 +53,7 @@ public class SwordScripts : MonoBehaviour
             }
             else
             {
-<<<<<<< Updated upstream
-                enemy.GetComponent<EnemyHealth>().damage(dmg);
-=======
                 enemy.gameObject.GetComponent<mainHealth>().damage(5);
-
->>>>>>> Stashed changes
             }
         }
 

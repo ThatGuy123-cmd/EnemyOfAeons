@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -10,9 +6,8 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     private GameObject sword;
     public float speed;
-    public SwordScripts scripted;
     public float jumped = 5.0f;
-    public Animator animator;
+    
 
     
     // Start is called before the first frame update
@@ -26,49 +21,19 @@ public class PlayerMovement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-<<<<<<< Updated upstream
+    { 
+       move();
+        //FixedUpdate();
 
-=======
->>>>>>> Stashed changes
-        move();
-
-        if (Input.GetMouseButtonDown(0))
-        {
-<<<<<<< Updated upstream
-            
-        }
-=======
-            scripted.swingSword();
-        }
-
-        float horizontalInput = Input.GetAxis("Horizontal");
-
-        // Dash
->>>>>>> Stashed changes
-        if (Input.GetMouseButtonDown(1))
-        {
-            jump();
-        }
-<<<<<<< Updated upstream
-=======
-
-
-        // if (IsGrounded())
+        // if (Input.GetKeyDown("space"))
         // {
-        //     playerRb.transform.position.y =
+        //     playerRb.AddForce(transform.position * jumped, ForceMode.Impulse);
+        //     //jump();
         // }
-        // else
-        //
-        // {
-        //     playerRb.transform.position.y = 
-        // }
-
-        //IsGrounded();
-        
-        //zoned();
->>>>>>> Stashed changes
     }
+
+        //float horizontalInput = Input.GetAxis("Horizontal");
+
 
     private void FixedUpdate()
     {
@@ -81,21 +46,16 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(transform.right * horizontalInput * speed * Time.deltaTime);
         movePlayer(verticalInput, horizontalInput);
         playerRb.MovePosition(playerPos + transform.forward * verticalInput * speed * Time.deltaTime);
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
+
+
     }
 
-    public void movePlayer(float movingV, float movingH)
+    void movePlayer(float movingV, float movingH)
     {
-<<<<<<< Updated upstream
-        scripted.swingSword();
-=======
+        
 
-        scripted.swingSword();
 
->>>>>>> Stashed changes
         if (movingV != 0 || movingH != 0)
         {
             animator.SetBool("Move", true);
@@ -104,24 +64,23 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("Move",false);
         }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
     }
 
-    public void jump()
+    void jump()
     {
-        playerRb.AddForce(transform.position * jumped, ForceMode.Impulse);
+        Debug.Log("working");
+        //playerRb.AddForce(transform.position * jumped, ForceMode.Impulse);
+        //playerRb.AddForce( new Vector3(0,2,0)* jumped, ForceMode.Impulse);
     }
 
-    public void move()
+    void move()
     {
        
         // Basic Movement
         float verticalInput = Input.GetAxis("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");
-        
+       // movePlayer(verticalInput, horizontalInput);
+
         transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime);
         transform.Translate(Vector3.forward * verticalInput * speed * Time.deltaTime);
     }

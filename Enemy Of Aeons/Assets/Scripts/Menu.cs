@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
-using TreeEditor;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -87,11 +87,11 @@ public class Menu : MonoBehaviour
     
     public void NextLevel()
     {
-        if (scene.buildIndex < 5)
+        if (scene.buildIndex < 3)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
-        else if (scene.buildIndex == 5)
+        else if (scene.buildIndex == 3)
         {
             SceneManager.LoadScene(0);
         }
@@ -99,7 +99,7 @@ public class Menu : MonoBehaviour
     
     public void RandomLevel()
     {
-        int rand = Random.Range(1, 4);
+        int rand = Random.Range(1, 3);
 
         SceneManager.LoadScene(rand);
     }

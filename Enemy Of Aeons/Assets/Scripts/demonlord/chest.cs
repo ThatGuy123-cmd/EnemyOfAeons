@@ -29,7 +29,7 @@ public class chest : MonoBehaviour
             //Destroy(gameObject);
             hasPowerup = true;
             //powerupIndicator.SetActive(true);
-            hit.damage = 2.0f;
+            hit.damage = 2;
             powerup.gameObject.SetActive(true);
             StartCoroutine(PowerupCooldown(10));
             
@@ -41,7 +41,7 @@ public class chest : MonoBehaviour
     {
         yield return new WaitForSeconds(sec);
         hasPowerup = false;
-        hit.damage = 1.0f;
+        hit.damage = 1;
         
         powerup.gameObject.SetActive(false);
     }

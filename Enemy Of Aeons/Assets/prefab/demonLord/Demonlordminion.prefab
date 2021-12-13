@@ -108,14 +108,14 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3263088388667891918}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 112
+  m_CollisionDetection: 1
 --- !u!114 &7404030326714234850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
   minionCount: 0
   boss: {fileID: 0}
   minionPrefab: {fileID: 3263088388667891918}
-  player: {fileID: 7035435717763583058, guid: 9512edf4cf7293f4c9bdd747f5268afb, type: 3}
+  player: {fileID: 0}
   speed: 1
   animator: {fileID: 5214455230964506971}
 --- !u!95 &-8856306755145418332
@@ -179,6 +179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boximon Fiery
       objectReference: {fileID: 0}
+    - target: {fileID: 1975194375736644, guid: 128a80094e00bf34fa2555766a7eea0e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4744222756475520, guid: 128a80094e00bf34fa2555766a7eea0e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -189,7 +193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4744222756475520, guid: 128a80094e00bf34fa2555766a7eea0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4744222756475520, guid: 128a80094e00bf34fa2555766a7eea0e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -254,5 +258,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.4160042, y: 1.7383952, z: 0.9916582}
-  m_Center: {x: 0.022807121, y: 0.3691976, z: -0.042825222}
+  m_Size: {x: 1.4160042, y: 1.3132031, z: 0.9916582}
+  m_Center: {x: 0.022807121, y: 0.58179367, z: -0.042825222}

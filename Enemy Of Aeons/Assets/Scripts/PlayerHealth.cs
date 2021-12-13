@@ -1,21 +1,17 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float currentHealth = 10;
+    public int currentHealth = 10;
     public Boolean invulnerable;
     public GameObject deathmenu;
     public GameObject HUD;
     public Animator animator;
     public bossScript enemyhealth;
     public GameObject winMenu;
-    public GameObject[] enem;
 
     public void Update()
     {
@@ -26,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public void damage(float damage)
+    public void damage(int damage)
     {
         currentHealth -= damage;
 
@@ -38,7 +34,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
     
-    public void setHealth(float health)
+    public void setHealth(int health)
     {
         currentHealth += health;
     }
@@ -64,10 +60,7 @@ public class PlayerHealth : MonoBehaviour
 
     IEnumerator won()
     {
-        // for (int i = 0; i <= enem.Length; i++)
-        // {
-        //     enem[i].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-        // }
+        
         yield return new WaitForSeconds(3.0f);
         HUD.SetActive(false);
         winMenu.SetActive(true);

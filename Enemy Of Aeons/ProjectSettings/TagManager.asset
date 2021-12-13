@@ -23,6 +23,7 @@ TagManager:
   - floor
   - powerup
   - edge
+  - coin
   layers:
   - Default
   - TransparentFX

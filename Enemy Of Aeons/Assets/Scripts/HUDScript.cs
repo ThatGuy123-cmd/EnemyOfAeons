@@ -20,11 +20,6 @@ public class HUDScript : MonoBehaviour
     {
         score();
         health();
-<<<<<<< Updated upstream
-        //scoreCounter();
-=======
-       // scoreCounter();
->>>>>>> Stashed changes
     }
 
     public void score()
@@ -37,19 +32,4 @@ public class HUDScript : MonoBehaviour
     {
         healthText.text = "Health = " + health1.currentHealth;
     }
-    
-<<<<<<< Updated upstream
-    // public void scoreCounter()
-    // {
-    //     ScoreCounterText.text = "Bonus Score = " + Counter.timeSpentOnLevel;
-    // }
-    
-=======
- /*   public void scoreCounter()
-    {
-        ScoreCounterText.text = "Bonus Score = " + Counter.timeSpentOnLevel;
-    }
-   8*/ 
->>>>>>> Stashed changes
-    
 }
