@@ -12,13 +12,13 @@ public class jaguarHealth : MonoBehaviour
     public Slider slider;
 
     public GameObject healthBar;
-
+    public float Currenthealth = 5;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        health = Maxhealth;
+        Currenthealth = Maxhealth;
         slider.value = CalculateHealth();
         
     }
@@ -26,8 +26,6 @@ public class jaguarHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        damage(3);
         slider.value = CalculateHealth();
 
         // ***  Insert to call next scene when main enemy is dead  ***
@@ -38,16 +36,11 @@ public class jaguarHealth : MonoBehaviour
     }
 
     float CalculateHealth(){
-        return health/Maxhealth;
+        return Currenthealth/Maxhealth;
     }
 
     public void damage(float damage){
-        Maxhealth -= damage;
-
-        if(health <=0){
-            Destroy(gameObject);
-        }
-            
+        Currenthealth -= damage;
     }
 
 //Enemy health bar reference 

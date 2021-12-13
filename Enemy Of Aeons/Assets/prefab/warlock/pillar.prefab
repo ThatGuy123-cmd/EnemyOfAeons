@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7373540639207831978}
   - component: {fileID: -1894497780411239006}
   - component: {fileID: 6632705934508807762}
+  - component: {fileID: 223610256}
   m_Layer: 0
   m_Name: pillar
   m_TagString: pillar
@@ -110,7 +111,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -130,3 +131,18 @@ MonoBehaviour:
   rotationSpeed: 20
   pillarPrefab: {fileID: 1735819392404754604}
   objs: 0
+--- !u!114 &223610256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735819392404754604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c5c4d88bffd204ea6eb62d6a63e873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Currenthealth: 1
+  animator: {fileID: 0}
+  counter: 1

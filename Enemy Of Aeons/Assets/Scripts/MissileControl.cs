@@ -8,6 +8,7 @@ public class MissileControl : MonoBehaviour
     // Tuning
     public float speed = 3.0f;
     private GameObject player;
+    private GameObject turtle;
     private Vector3 target;
     private Boolean deflected;
     
@@ -15,6 +16,7 @@ public class MissileControl : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
+        turtle = GameObject.Find("Turtle");
     }
 
     // Update is called once per frame
@@ -38,6 +40,18 @@ public class MissileControl : MonoBehaviour
             Debug.Log("DEFLECTED");
             deflected = true;
         }
+
+        if (other.GetComponent<Collider>().CompareTag("Turtle") && deflected)
+        {
+            other.GetComponent<EnemyHealth>().damage(2);
+            Destroy(gameObject);
+        }
+        if (other.GetComponent<Collider>().CompareTag("Player"))
+        {
+            other.GetComponent<PlayerHealth>().damage(2);
+            Destroy(gameObject);
+        }
+        
     }
 
     public void setDeflected()
@@ -52,7 +66,7 @@ public class MissileControl : MonoBehaviour
 
     void backToSender()
     {
-        target = GameObject.Find("TurtleTank").transform.position;
+        target = turtle.transform.position;
         transform.position = Vector3.MoveTowards(transform.position, target, 1.0f * speed * Time.deltaTime);
     }
     

@@ -1,4 +1,6 @@
 [Ll]ibrary/
+[Ll]ogs/
+**/Logs
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/

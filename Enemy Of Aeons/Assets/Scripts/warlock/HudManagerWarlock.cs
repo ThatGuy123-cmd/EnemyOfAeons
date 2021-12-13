@@ -13,12 +13,12 @@ public class HudManagerWarlock : MonoBehaviour
     public Canvas HUD;
     public GameObject PAUSE;
 
-    private demonlordHealth lord = new demonlordHealth();
+    //private demonlordHealth lord = new demonlordHealth();
 
     public bool Paused = false;
     void Start()
     {
-        score = lord.counter;
+        //score = lord.counter;
         scoreText.text = "Score: " + score;
         
     }

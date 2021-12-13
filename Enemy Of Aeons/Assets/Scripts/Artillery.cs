@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 public class Artillery : MonoBehaviour
 {
     public GameObject grenadePrefab;
+    public GameObject gIndicatorPrefab;
     public GameObject missilePrefab;
     public GameObject player;
     public float delay = 3.0f;
@@ -49,22 +50,24 @@ public class Artillery : MonoBehaviour
             Vector3 t1 = new Vector3(target.x,target.y + 10.0f,target.z);
             var rotation = grenadePrefab.transform.rotation;
             Instantiate(grenadePrefab, t1,rotation);
+            Instantiate(gIndicatorPrefab, t1 - new Vector3(0,t1.y,0), rotation);
             // Target2 - t2
             for (int i = 0; i <= Random.Range(1, 4); i++)
             {
                 Vector3 t2 = new Vector3(randVector(XBoundary), 10.0f, randVector(ZBoundary));
                 Instantiate(grenadePrefab, t2,rotation);
+                Instantiate(gIndicatorPrefab, t2 - new Vector3(0,t1.y,0), rotation);
             }
             yield return new WaitForSeconds(3.0f);
         }
  
     }
-
+    
     IEnumerator launchMissle()
     {
         while (!_stopSpawn)
         {
-            Vector3 launchPos = new Vector3(randVector(XBoundary), 0.5f, ZBoundary);
+            Vector3 launchPos = new Vector3(randVector(XBoundary), 0.5f, ZBoundary - 1.2f);
             Instantiate(missilePrefab, launchPos, rotation: missilePrefab.transform.rotation);
             yield return new WaitForSeconds(Random.Range(2.0f, 5.0f));
         }

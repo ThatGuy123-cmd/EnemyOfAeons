@@ -11,8 +11,7 @@ public class ColissionHandler : MonoBehaviour
     // Relations
     GameObject player;
     public PlayerHealth playerHealth;
-
-    public MissileControl missleControl;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +26,7 @@ public class ColissionHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (CompareTag("Grenade"))
+        if (other.CompareTag("Grenade"))
         {
             grenadeExplosion();
             Destroy(gameObject);
